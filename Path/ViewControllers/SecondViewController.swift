@@ -9,10 +9,10 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    @IBOutlet var nameLabel: UILabel!
+    
     var character: Character!
     // в лейбл передать имя из модели и передать экземпляр модели дальше
-    
-    @IBOutlet var nameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
