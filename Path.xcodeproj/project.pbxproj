@@ -64,14 +64,11 @@
 		06CB96D228B0C971007423BC /* Path */ = {
 			isa = PBXGroup;
 			children = (
-				06CB96D328B0C971007423BC /* AppDelegate.swift */,
-				06CB96D528B0C971007423BC /* SceneDelegate.swift */,
 				06CB96F028B0CD27007423BC /* Models */,
 				06CB96ED28B0CCCA007423BC /* ViewControllers */,
-				06CB96D928B0C971007423BC /* Main.storyboard */,
+				870581B829AD24E700B34033 /* Storyboards */,
+				870581B729AD24A700B34033 /* App */,
 				06CB96DC28B0C971007423BC /* Assets.xcassets */,
-				06CB96DE28B0C971007423BC /* LaunchScreen.storyboard */,
-				06CB96E128B0C971007423BC /* Info.plist */,
 			);
 			path = Path;
 			sourceTree = "<group>";
@@ -95,6 +92,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		870581B729AD24A700B34033 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				06CB96D328B0C971007423BC /* AppDelegate.swift */,
+				06CB96D528B0C971007423BC /* SceneDelegate.swift */,
+				06CB96E128B0C971007423BC /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		870581B829AD24E700B34033 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				06CB96D928B0C971007423BC /* Main.storyboard */,
+				06CB96DE28B0C971007423BC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +121,7 @@
 				06CB96CC28B0C971007423BC /* Sources */,
 				06CB96CD28B0C971007423BC /* Frameworks */,
 				06CB96CE28B0C971007423BC /* Resources */,
+				870581B629AD249200B34033 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -160,6 +177,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		870581B629AD249200B34033 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06CB96CC28B0C971007423BC /* Sources */ = {
@@ -321,7 +358,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VQ5VJ2W2YB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Path/Info.plist;
+				INFOPLIST_FILE = Path/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -349,7 +386,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VQ5VJ2W2YB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Path/Info.plist;
+				INFOPLIST_FILE = Path/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

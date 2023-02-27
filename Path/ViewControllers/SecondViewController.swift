@@ -7,21 +7,16 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-    
+final class SecondViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     
     var character: Character!
     // в лейбл передать имя из модели и передать экземпляр модели дальше
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         nameLabel.text = character.name
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
@@ -32,7 +27,6 @@ class SecondViewController: UIViewController {
                 fourthVC.character = character
                 return
             }
-            
             threeVC.character = character
         }
     }
